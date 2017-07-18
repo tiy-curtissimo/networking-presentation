@@ -7,10 +7,68 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			.reveal .block-head {
+				display: block;
+			}
+			.reveal .subheading {
+				font-size: 1.5em;
+				font-variant: small-caps;
+			}
+			.reveal .layered-explanation {
+				display: flex;
+				justify-content: center;
+			}
+			.reveal .layer-groups {
+				flex: 0 0 650px;
+				display: flex;
+				flex-direction: column;
+			}
+			.reveal .layer-group {
+				display: flex;
+				border-bottom: 1px solid #657B83;
+			}
+			.reveal .layer-group:last-child {
+				border-bottom-width: 0;
+			}
+			.reveal .layered-explanation .layer-group {
+				border-bottom: 0;
+			}
+			.reveal .layer-label {
+				font-size: .9em;
+				flex: 0 0 250px;
+				padding: 8px 16px;
+			}
+			.reveal .layer-definitions {
+				flex: 0 0 680px;
+			}
+			.reveal .layered-explanation .layer-definitions {
+				flex: 0 0 350px;
+			}
+			.reveal .layer {
+				text-align: left;
+				box-sizing: border-box;
+				margin: 0 0 8px 0;
+				padding: 8px 16px;
+			}
+			.reveal .layered-explanation .layer {
+				background-color: #657B83;
+				color: #FDF6E3;
+				text-align: center;
+			}
+			.reveal .slides section .layer.fragment.highlight-current-green.visible.current-fragment {
+				background-color: #17ff2e;
+				color: #657B83;
+			}
+			.reveal .lowercase {
+				text-transform: lowercase;
+			}
+		</style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -24,8 +82,95 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Network</h1>
+					<h2>Wires - Boxes - Magic</h2>
+					<p>
+						<b class="block-head subheading">Gil Pratte</b>
+						<div>24 - 25 July 2017</div>
+					</p>
+					<aside class="notes">
+						Your introduction and setting the expectations.
+					</aside>
+				</section>
+				<section>
+					<h2>Agenda</h2>
+					<div class="layer-group">
+						<div class="layer-label">Monday</div>
+						<div class="layer-definitions">
+							<div class="layer">Inside the network</div>
+							<div class="layer"><code>http://</code>World Wide Web</div>
+							<div class="layer">Database communication</div>
+						</div>
+					</div>
+					<div class="layer-group">
+						<div class="layer-label">Tuesday</div>
+						<div class="layer-definitions">
+							<div class="layer"><code>https://</code>Secure World Wide Web</div>
+							<div class="layer">Network Errors and Tools</div>
+							<div class="layer">HCA Network Layout and Services</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Inside the Network</h2>
+				</section>
+				<section>
+					<div class="layered-explanation">
+						<div class="layer-groups">
+							<div class="layer-group">
+								<div class="layer-label">Host Layers</div>
+								<div class="layer-definitions">
+									<div class="layer fragment highlight-current-green">Application</div>
+									<div class="layer fragment highlight-current-green">Presentation</div>
+									<div class="layer fragment highlight-current-green">Session</div>
+									<div class="layer fragment highlight-current-green">Transport</div>
+								</div>
+							</div>
+							<div class="layer-group">
+								<div class="layer-label">Media Layers</div>
+								<div class="layer-definitions">
+									<div class="layer fragment highlight-current-green">Network</div>
+									<div class="layer fragment highlight-current-green">Data Link</div>
+									<div class="layer fragment highlight-current-green">Physical</div>
+								</div>
+							</div>
+						</div>
+						<div class="layer-explanation">
+							<i>explanations of each layer appear here on transition</i>
+						</div>
+					</div>
+				</section>
+				<section>
+					<i>LAN, WAN, wifi image here</i>
+				</section>
+				<section>
+					<i>diagram of routers and switches</i>
+				</section>
+				<section>
+					<i>diagram of architecture of generic cloud computing</i>
+				</section>
+				<section>
+					<h2>WWW</h2>
+				</section>
+				<section>
+					<h3>HTTP</h3>
+					<h4>the language of the Web</h4>
+					<p><a target="_blank" href="http://www.example.com">requests and responses</a></p>
+					<aside class="notes">
+						The steps of an HTTP request/response lifecycle with Chrome
+						examples.
+						<ul>
+							<li>Resolve DNS</li>
+							<li>TCP/IP connection to a port: syn, syn-ack, ack</li>
+							<li>"keep-alive" vs. close</li>
+							<li>Going through a proxy</li>
+							<li>Getting to a load balancer</li>
+							<li>Server caching</li>
+							<li>Client caching</li>
+						</ul>
+					</aside>
+				</section>
 			</div>
 		</div>
 
@@ -37,6 +182,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
