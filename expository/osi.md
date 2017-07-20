@@ -282,3 +282,9 @@ This is the Post Office truck and the road. This is
 the easiest layer to understand. It's physical. It
 makes signals of zeroes and ones for the actual wires
 or fiber or whatever to carry to another terminus.
+
+## Resources
+
+* Wikipedia: [OSI Model](https://en.wikipedia.org/wiki/OSI_model#External_links)
+* Microsoft: [The OSI Model's Seven Layers Defined and Functions Explained](https://support.microsoft.com/en-us/help/103884/the-osi-model-s-seven-layers-defined-and-functions-explained)
+* The TCP/IP Guide: [The Open System Interconnection (OSI) Reference Model](http://www.tcpipguide.com/free/t_TheOpenSystemInterconnectionOSIReferenceModel.htm)
