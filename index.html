@@ -203,14 +203,37 @@
 								</div>
 							</div>
 							<div class="layer-explanation">
-								<i>steps to send an http request</i>
+								<i>steps to send an HTTP request</i>
 							</div>
 						</div>
 					</section>
 					<section>
 						<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP Caching</a>
 					</section>
-
+					<section>
+						<a href="http://royal.pingdom.com/2009/06/08/a-visual-explanation-of-how-dns-lookups-work/">DNS lookups</a>
+						<aside class="notes">
+							<ul>
+								<li>DNS syncs up domain names with IP addresses enabling humans to use memorable domain names while computers on the Internet can use IP addresses</li>
+								<li>There are about 300 to 400 million domain names.</li>
+							</ul>
+							<ul>
+								<li>Query the recursive name server (provided by ISP or wireless provider). The name server will check its cache for the entry and check its TTL. If it doesn't have it or it is expired then...</li>
+								<li>Query the Internet root servers to get the address of th name servers for the .com top level domain (TLD)</li>
+								<li>Query the .com TLD name servers to get the address of the authoritative name servers for abc.com</li>
+								<li>Query the authoritative name servers for abc.com to finally get the IP address</li>
+							</ul>
+							View DNS server on mac
+							<ul>
+								<li>Choose Apple menu > System Preferences, then click Network</li>
+								<li>Select the network connection service you want to use (such as Wi-Fi or Ethernet, unless you named it something else) in the list, then click Advanced</li>
+								<li>Click DNS</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						assemble
+					</section>
 
 
 				</section>
