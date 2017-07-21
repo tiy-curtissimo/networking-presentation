@@ -167,22 +167,52 @@
 					<h2>WWW</h2>
 				</section>
 				<section>
-					<h3>HTTP</h3>
-					<h4>the language of the Web</h4>
-					<p><a target="_blank" href="http://www.example.com">requests and responses</a></p>
-					<aside class="notes">
-						The steps of an HTTP request/response lifecycle with Chrome
-						examples.
-						<ul>
-							<li>Resolve DNS</li>
-							<li>TCP/IP connection to a port: syn, syn-ack, ack</li>
-							<li>"keep-alive" vs. close</li>
-							<li>Going through a proxy</li>
-							<li>Getting to a load balancer</li>
-							<li>Server caching</li>
-							<li>Client caching</li>
-						</ul>
-					</aside>
+					<section>
+						<h3>HTTP</h3>
+						<h4>the language of the Web</h4>
+						<p><a target="_blank" href="http://www.example.com">requests and responses</a></p>
+						<aside class="notes">
+							The steps of an HTTP request/response lifecycle with Chrome
+							examples.
+							<ul>
+								<li>Resolve DNS</li>
+								<li>TCP/IP connection to a port: syn, syn-ack, ack</li>
+								<li>"keep-alive" vs. close</li>
+								<li>Going through a proxy</li>
+								<li>Getting to a load balancer</li>
+								<li>Server caching</li>
+								<li>Client caching</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<p>What happens when we type <code>http://www.example.com/</code> in a browser</p>
+					</section>
+					<section>
+						<div class="layered-explanation">
+							<div class="layer-groups">
+								<div class="layer-group">
+									<div class="layer-definitions">
+										<div class="layer fragment highlight-current-green">Check browser cache</div>
+										<div class="layer fragment highlight-current-green">Resolve DNS</div>
+										<div class="layer fragment highlight-current-green">Assemble HTTP request</div>
+										<div class="layer fragment highlight-current-green">TCP/IP connection</div>
+										<div class="layer fragment highlight-current-green">SSL encryption</div>
+										<div class="layer fragment highlight-current-green">IP packets</div>
+									</div>
+								</div>
+							</div>
+							<div class="layer-explanation">
+								<i>steps to send an http request</i>
+							</div>
+						</div>
+					</section>
+					<section>
+						<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP Caching</a>
+					</section>
+
+
+
 				</section>
 				<section>
 					<h2>Review</h2>
