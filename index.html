@@ -479,6 +479,16 @@
 						<h2>Establishing the Secure Connection</h2>
 						<img src="images/https-6.svg">
 					</section>
+					<section>
+						<h2>DIY Certs</h2>
+						<h3>You can generate your own certificates, too!</h3>
+						<aside class="notes">
+							<p>Run this in ./src/main/resources of the Spring app.</p>
+							<pre><code>keytool -genkeypair -alias tiynetapp -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore tiynetapp.p12 -validity 3650 -dname "CN=Gil Pratte, OU=Academy, O=The Iron Yard, L=Austin, ST=Texas, C=US" -keypass tiynetapp -storepass tiynetapp</code></pre>
+							<p>In <b>application.yml</b>, uncomment the SSL stuff and change the port from 80 to 443</p>
+							<p>Run the Spring app with <code>sudo mvn spring-boot:run</code></p>
+						</aside>
+					</section>
 				</section>
 				<section>
 					<h1> OWASP! Sql injecting, XSS, CSRF (OWASP)
