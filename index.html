@@ -162,7 +162,143 @@
 					</section>
 				</section>
 				<section>
-					<h2>IPS Model Presentation</h2>
+					<section>
+						<h2>IPS Model Presentation</h2>
+					</section>
+					<section>
+						<h3>Different than OSI</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>OSI</th><th>IPS</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Model then architecture</td>
+									<td>Architecture then model</td>
+								</tr>
+								<tr>
+									<td>Conceptual</td><td>Concrete</td>
+								</tr>
+								<tr>
+									<td>Strict boundaries</td>
+									<td>Loose boundaries</td>
+								</tr>
+								<tr>
+									<td>7 layers</td>
+									<td>4 layers</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Thank you AT&T</h3>
+						<p>June 1989 open sourced TCP/IP for unix</p>
+						<p class="fragment">IBM and others picked it up</p>
+						<p class="fragment">Windows 95 joined the party</p>
+					</section>
+					<section>
+						<h3>Layers</h3>
+						<p>Application Layer</p>
+						<p>Tranport Layer</p>
+						<p>Internet Layer</p>
+						<p>Link Layer</p>
+				  </section>
+					<section>
+						<img height="600px"src="images/IP_stack_connections.svg">
+					</section>
+					<section>
+						<h3>Application Layer</h3>
+						<p>The purpose of the Application Layer is to provide software applications with services of the Internet like file/data retrieval, send and receive email, publish messages, and use cryptocurrencies.</p>
+
+					</section>
+					<section>
+						<p>Design of the protocols of the Applciation Layer tend to follow <a href="https://en.wikipedia.org/wiki/Jon_Postel">Jon Postel</a>'s law:</p>
+
+						<blockquote cite="https://en.wikipedia.org/wiki/Jon_Postel#Postel.27s_law">[build application protocols with] a general principle of robustness: be conservative in what you do, be liberal in what you accept from others.</blockquote>
+
+					</section>
+					<section>
+						<p>Basically, any protocol that uses TCP or UDP lives in the Application Layer.</p>
+					</section>
+					<section>
+						<p>Examples of Application Layer Protocols</p>
+						<ul>
+							<li>HTTP</li>
+							<li>FTP</li>
+							<li>SMTP</li>
+							<li>DHCP</li>
+							<li>DNS</li>
+							<li>SSH</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Transport Layer</h3>
+						<p>Delivers data from one application to another irrespective of what data that the application sends and what the underlying network looks like. This layer is the one that defines and allows binding to ports.</p>
+						<aside class="notes">
+							<p>Tranport can be connection-oriented or connection-less</p>
+						</aside>
+					</section>
+					<section>
+						<h4>TCP (connection-oriented)</h4>
+						<blockquote cite="http://">
+							[provides] one-to-one, connection-oriented, reliable communication service responsible for the establishment of a connection, the sequencing and acknowledgement of packets sent, and the recovery of packets lost during transmission.
+						</blockquote>
+					</section>
+					<section>
+						It is characterized as a
+						<blockquote cite="http://">
+							reliable stream delivery service which guarantees that all bytes received will be identical with bytes sent and in the correct order.
+						</blockquote>
+					</section>
+					<section>
+						<p>TCP creates two-way transmission connections with a three-step handshake:</p>
+						<p class="fragment">client send SYN flag with random number</p>
+						<p class="fragment">server replies with SYN-ACK flag with client's number + 1 and a new random number</p>
+						<p class="fragment">client sends ACK flag and server's number + 1</p>
+					</section>
+					<section>
+						<h4>UDP (connection-less) "fire and forget"</h4>
+						<ul>
+							<li>Does not guarantee delivery</li>
+							<li>Does not guarantee ordering</li>
+							<li>Does not guarantee removal of duplicates</li>
+							<li>Does not guarantee error correction</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Internet Layer</h4>
+						<p>This is IP. It does two things: addressing (IP addresses) and routing. That's it. Figure out where a packet needs to go.</p>
+						<aside class="notes">
+							<p>Sometimes that's from the actual client to a server. Or from router to router to router ...</p>
+						</aside>
+					</section>
+					<section>
+						<h4>ICMP</h4>
+						<ul>
+							<li>used for error messages</li>
+							<li>used for operational information</li>
+							<li>not used for data</li>
+							<li>contained in IP packets but handled differently</li>
+							<aside class="notes">
+								<ul>
+									<li>timeout messages</li>
+									<li>traceroute uses icmp</li>
+								</ul>
+							</aside>
+						</ul>
+					</section>
+					<section>
+						<h3>Link Layer</h3>
+						<p>Physical hardware moving packets (from to MAC adresses)</p>
+						<aside class="notes">
+							Something about VPN point to BT.
+						</aside>
+					</section>
+					<section>
+						<img height="600px"src="images/UDP_encapsulation.svg">
+					</section>
 				</section>
 				<section>
 					<section>
@@ -547,7 +683,7 @@ google.com  text = "v=spf1 include:_spf.google.com ~all"  // meta info
 						<aside class="notes">
 							<p>
 								Maps a route from your computer to another by sending
-								3 datagrams with a TTL (the hop limit) of 0, then 1, then 2, etc. 
+								3 datagrams with a TTL (the hop limit) of 0, then 1, then 2, etc.
 								until it reaches the final destination. Each time the hop
 								limit reaches 0, the router will send back an ICMP message
 								that says it failed. <code>traceroute</code> logs that and
