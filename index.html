@@ -74,6 +74,9 @@
 				border: 0;
 				box-shadow: none;
 			}
+			.reveal code.cli {
+				text-transform: none;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -352,7 +355,86 @@
 CORS, JWT, OAuth </h1>
 				</section>
 				<section>
-					<h1> VPN! </h1>
+					<section>
+						<h1>Network Tools</h1>
+					</section>
+					<section>
+						<h2><code class="cli">nslookup</code></h2>
+						<p>Translate a name to an IP address</p>
+						<aside class="notes">
+							<p>By default, returns the A/AAAA record</p>
+							<p><code>nslookup google.com</code></p>
+							<p>Can also return all the DNS records</p>
+							<p><code>nslookup -type=any google.com</code></p>
+						</aside>
+					</section>
+					<section>
+						<h2><code class="cli">ping</code></h2>
+						<p>Verify a host exists</p>
+						<aside class="notes">
+							<p>
+								Use ping to send a message to another computer and, if that
+								computer exists and is willing, it will respond.
+							</p>
+							<p><code>ping -c 5 google.com</code></p>
+							<p><code>ping -c 5 example.fubar</code></p>
+							<div><b>Output:</b></div>
+							<code>PING google.com (216.58.194.110): 56 data bytes</code>
+							<ul>
+								<li class="explanation">google.com resolves to 216.58.194.110</li>
+								<li class="explanation">Your computer sent a 56-byte message</li>
+							</ul>
+							<code>64 bytes from 216.58.194.110: icmp_seq=0 ttl=54 time=39.147 ms</code>
+							<ul>
+								<li class="explanation">216.58.194.110 responded with a 64-byte message</li>
+								<li class="explanation">imcp_seq is just the sequence</li>
+								<li class="explanation">TTL is normally set to 63, so 63 - 54 = 9, 9 hops from google.com to you</li>
+								<li class="explanation">The ping took 39.147 ms</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h2><code class="cli">traceroute</code></h2>
+						<p>Find a route from your computer to another</p>
+						<aside class="notes">
+							<p>
+								Maps a route from your computer to another by sending
+								3 datagrams with a TTL (the hop limit) of 0, then 1, then 2,
+								until it reaches the final destination. Each time the hop
+								limit reaches 0, the router will send back an ICMP message
+								that says it failed. <code>traceroute</code> logs that and
+								shows it to you.
+							</p>
+							<p><code>traceroute google.com</code></p>
+							<div><b>Kinds of Output:</b></div>
+							<ul>
+								<li>
+									One server responded to all three packets.<br>
+									<code>[hop #] [server (ip)] [time 1] [time 2] [time 3]</code>
+								</li>
+								<li>All packets dropped<br><code>* * *</code></li>
+								<li>Three different servers each respond to a packet
+									<pre><code>[hop #] [server (ip)] [time]
+        [server (ip)] [time]
+        [server (ip)] [time]</code></pre></li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h2><code class="cli">nmap</code></h2>
+						<p>Scans for valid IP addresses and ports on those hosts</p>
+						<aside class="notes">
+							<p><i>This can take a while to complete...</i></p>
+							<p>Options used in this example</p>
+							<ul>
+								<li><b>-A</b>: Enable OS detection, version detection, script scanning, and traceroute</li>
+								<li><b>-T4</b>: for faster execution</li>
+							</ul>
+							<p><code>nmap -A -T4 scanme.nmap.org</code></p>
+							<p>Then, let's do The Iron Yard!</p>
+							<p><code>nmap -A -T4 www.theironyard.com</code></p>
+						</aside>
+					</section>
 				</section>
 			</div>
 		</div>
