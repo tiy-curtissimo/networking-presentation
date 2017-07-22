@@ -77,6 +77,13 @@
 			.reveal code.cli {
 				text-transform: none;
 			}
+			.reveal blockquote {
+				border: 0;
+				box-shadow: none;
+				border-left: 4px solid #657B83;
+				text-align: left;
+				padding-left: 1em;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -389,7 +396,59 @@
 					</ul>
 				</section>
 				<section>
-					<h1> Security! with the Spring paragraph </h1>
+					<section>
+						<h1>Security!</h1>
+					</section>
+					<section>
+						<blockquote cite="http://docs.spring.io/spring-security/site/docs/4.2.4.BUILD-SNAPSHOT/reference/htmlsingle/">
+							Security is an ever-moving target, and it’s important to pursue
+							a comprehensive, system-wide approach. In security circles we
+							encourage you to adopt "layers of security", so that each layer
+							tries to be as secure as possible in its own right, with
+							successive layers providing additional security. The "tighter"
+							the security of each layer, the more robust and safe your
+							application will be.
+						</blockquote>
+					</section>
+					<section>
+						<blockquote cite="http://docs.spring.io/spring-security/site/docs/4.2.4.BUILD-SNAPSHOT/reference/htmlsingle/">
+							At the bottom level you’ll need to deal
+							with issues such as transport security and system
+							identification, in order to mitigate man-in-the-middle attacks.
+						</blockquote>
+					</section>
+					<section>
+						<blockquote cite="http://docs.spring.io/spring-security/site/docs/4.2.4.BUILD-SNAPSHOT/reference/htmlsingle/">
+							Next you’ll generally utilise firewalls, perhaps with VPNs or IP
+							security to ensure only authorised systems can attempt to
+							connect.
+						</blockquote>
+					</section>
+					<section>
+						<blockquote cite="http://docs.spring.io/spring-security/site/docs/4.2.4.BUILD-SNAPSHOT/reference/htmlsingle/">
+							In corporate environments you may deploy a DMZ to separate
+							public-facing servers from backend database and application
+							servers.
+						</blockquote>
+					</section>
+					<section>
+						<blockquote cite="http://docs.spring.io/spring-security/site/docs/4.2.4.BUILD-SNAPSHOT/reference/htmlsingle/">
+							Your operating system will also play a critical part, addressing
+							issues such as running processes as non-privileged users and
+							maximising file system security. An operating system will
+							usually also be configured with its own firewall.
+						</blockquote>
+					</section>
+					<section>
+						<blockquote cite="http://docs.spring.io/spring-security/site/docs/4.2.4.BUILD-SNAPSHOT/reference/htmlsingle/">
+							Hopefully somewhere along the way you’ll be trying to
+							prevent denial of service and brute force attacks against the
+							system. An intrusion detection system will also be especially
+							useful for monitoring and responding to attacks, with such
+							systems able to take protective action such as blocking
+							offending TCP/IP addresses in real-time.
+						</blockquote>
+					</section>
 				</section>
 				<section>
 					<section>
