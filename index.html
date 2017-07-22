@@ -366,6 +366,24 @@ CORS, JWT, OAuth </h1>
 							<p><code>nslookup google.com</code></p>
 							<p>Can also return all the DNS records</p>
 							<p><code>nslookup -type=any google.com</code></p>
+							<p>Can also return and name dns server</p>
+							<p><code>nslookup google.com - ns1.google.com</code></p>
+<pre><code>Server:     209.18.47.61      // 1. dns server - not the authoritative
+Address:    209.18.47.61#53   // 2. with port
+
+Non-authoritative answer:    // see 1.
+Name:   google.com
+Address: 172.217.6.142
+
+google.com  has AAAA address 2607:f8b0:4000:80f::200e
+google.com  nameserver = ns2.google.com.   // 3. authoritative name server
+google.com  rdata_257 = \# 15 00056973737565706B692E676F6F67  // extra stuff
+google.com  mail exchanger = 20 alt1.aspmx.l.google.com. // 20, 30, ... are lookup order
+
+google.com
+    origin = ns1.google.com       // got the answer from
+google.com  text = "v=spf1 include:_spf.google.com ~all"  // meta info
+</code></pre>
 						</aside>
 					</section>
 					<section>
@@ -399,7 +417,7 @@ CORS, JWT, OAuth </h1>
 						<aside class="notes">
 							<p>
 								Maps a route from your computer to another by sending
-								3 datagrams with a TTL (the hop limit) of 0, then 1, then 2,
+								3 datagrams with a TTL (the hop limit) of 0, then 1, then 2, etc. 
 								until it reaches the final destination. Each time the hop
 								limit reaches 0, the router will send back an ICMP message
 								that says it failed. <code>traceroute</code> logs that and
