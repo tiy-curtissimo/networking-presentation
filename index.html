@@ -161,10 +161,16 @@
 					<section>
 						<h3>LAN</h3>
 						<img src="images/lan.svg">
+						<aside class="notes">
+							Computers inside LAN mostly get IP using DHCP.
+						</aside>
 					</section>
 					<section>
 						<h3>WAN</h3>
 						<img src="images/wan.svg">
+						<aside class="notes">
+							Think of the routers as an ISP
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -174,14 +180,37 @@
 					<section>
 						<h3>Switches (OSI Layer 2 Devices)</h3>
 						<img src="images/switch.svg">
+						<aside class="notes">
+							<ul>
+								<li>switches only know mac addresses</li>
+								<li>packets and p2p or multicast</li>
+								<li>p2p goes to one nic</li>
+								<li>multicast goes to all nics</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<h3>Routers (OSI Layer 3 Devices)</h3>
 						<img src="images/router.svg">
+						<aside class="notes">
+							<ul>
+								<li>192.168 my house</li>
+								<li>118 ip of my modem AT&T ISP</li>
+								<li>middle is WAN router (trans atlantic cable)</li>
+								<li>30 ip of amazon uk</li>
+								<li>10.199 amazon's server</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<h3>Firewall</h3>
 						<img src="images/firewall.svg">
+						<aside class="notes">
+							<ul>
+								<li>10.199 my computer at work can serf web and ping</li>
+								<li>firewall allows ssh (rules no password but cert)</li>
+							</ul>
+						</aside>
 					</section>
 				</section>
 				<section>
