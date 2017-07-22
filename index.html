@@ -137,22 +137,114 @@
 						<h2>OSI Model Presentation</h2>
 					</section>
 					<section>
+						<h3>Overview</h3>
+						<p>It is a <em>conceptual</em> model, not a real one (like IPS)</p>
+						<p class="fragment">Consider this an <em>ideal</em> network organization</p>
+						<p class=fragment>Like many ISO standards, much of it is formal theory</p>
+						<p class="fragment">The concepts are a key element in most modern network system design</p>
+					</section>
+					<section>
+						<h3>Post office analogy</h3>
+						<p>Hopefully most of you are old enough to have mailed a box or two at the post office.</p>
+						<p>So let's pretend, that you are going to upload a recently recorded screencast to YouTube that you have made.</p>
+					</section>
+					<section>
 						<h3>Layer 8 - You!</h3>
+						<p>You've made your movie, encoded it to Ogg, and are ready to send it to YouTube. You click the button and...</p>
+						<aside class="notes">
+							<p>Ok, so there's no real "Layer 8", not in the original spec, anyway. Infosec defind "the user" as Layer 8, so you're stuck with it. </p>
+						</aside>
 					</section>
 					<section>
 						<h3>Layer 7 - Application Layer</h3>
+						<p>Its purpose is to exchange data between programs running on the source and destination hosts.</p>
+
+						<p>This layer will identify communication partners and determining resource availability.</p>
+					</section>
+					<section>
+						<h3>Layer 7 - Post office analogy</h3>
+						<p>The movie that you've encoded has been printed out into 29,923,182 still images by the local print shop. </p>
+						<p>You've dumped them at the Application Counter at Post Office with where you want it to go, threw some cash on the counter, and walked out.</p>
 					</section>
 					<section>
 						<h3>Layer 6 - Presentation Layer</h3>
+						<p>It handles the transformation of the data coming at it from the Application Layer into a common structure that the lower layers will use</p>
+						<aside class="notes">
+							<ul>
+								<li>convert from UCS2 for UTF16</li>
+								<li>little-endian to big-endian</li>
+								<li>compression</li>
+								<li>TLS encryption</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>Layer 6 - Post office analogy</h3>
+						<p>A worker at the Application Counter hands the sheets to Sid, the worker at the Presentation Station.</p>
+						<p class="fragment">Sid takes a look at all these sheets of letter-sized paper. This particular Post Office really likes using A4, so the person changes the size of all the sheets of paper. (i.e., data transformation)</p>
+					</section>
+					<section>
+						<h3>Layer 6 - Post office analogy continued</h3>
+						<p>Sid then realizes that there are images that are identical because nothing changed between the movie frames. He discards the extra ones and writes a little note about the duplicates. (i.e. compression)</p>
+						<p class="fragment">Sid then decide to fold all of the pieces in thirds because that's the standard way to fold a piece of paper for the Post Office. (i.e. encryption)</p>
 					</section>
 					<section>
 						<h3>Layer 5 - Session Layer</h3>
+						<p>The Session Layer allows devices to establish, manage, and cleanly end sessions which are just a logical persistent link between two processes.</p>
+						<p>This layer allows those two processes to exchange data over a period of time like minutes, hours, days.</p>
+					</section>
+					<section>
+						<h3>Layer 5 - Post office analogy</h3>
+						<p>Sally, the Session Station worker, has received the movie from the Presentation Station.</p>
+						<p class="fragment">Sally writes the destination on a little ticket, puts it in an order carousel, and yells, "DATA UP!" which alerts everyone in the back room that another round of data is ready to be sent and that Sally should be alerted if something fails between this post office and the receiving post office. (i.e. creates a session)</p>
 					</section>
 					<section>
 						<h3>Layer 4 - Transport Layer</h3>
+						<p>If sending determines how to split up the data into smaller units (fragment), and apply headers to it for tracking, order, and addressing. When receiving reassembles back into data.</p>
+						<p class="fragment">Takes on the responsibility of ensuring reliable transmission.</p>
+						<aside class="notes">
+							Regarding reliable transmision
+							<ul>
+								<li>controlling the amount of traffic</li>
+								<li>acknowledging the receipt of messages</li>
+								<li>which application sent data (or which is to receive data)</li>
+								<li>deals with error in messages and missing messages</li>
+								<li>connection handling (reinitiate, retransmit)</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>Layer 4 - Post office analogy</h3>
+						<p>The movie has reached Tanya at the Transport Room. She knows that the 23,493,785 pieces of paper is too large a package to send.</p>
+						<p class="fragment">She "fragment"s the whole bunch into 24 bundles, the first 23 containing 1,000,000 sheets and the last containing the remainder. (i.e. fragmenting)</p>
+					</section>
+					<section>
+						<h3>Layer 4 - Post office analogy continued</h3>
+						<p>Tanya puts each bundle into a box and affixes a label that has a serial number, the order that the bundle fits into the overall group of boxes, and the name of the recipient. (i.e. addressing, ordering)</p>
+						<p class="fragment">In the journal she jots down the serial number and "Google Chrome 0x383A983B" which is the application from which the data originated. (i.e. tracking)</p>
+					</section>
+					<section>
+						<h3>Layer 4 - Post office analogy continued</h3>
+						<p>She takes all of that, makes a copy of each box, and sends them on to the next station. (i.e. in case of errors)</p>
+						<p class="fragment">Once she gets acknowledgement that all of the boxes arrived in good condition will he get rid of his copies.</p>
 					</section>
 					<section>
 						<h3>Layer 3 - Network Layer</h3>
+						<p>When sending network layer will</p>
+						<ul>
+							<li>get a segment from the Transport Layer and break it up into even smaller packets if necessary</li>
+							<li>translate the network address to a physical address</li>
+							<li>figure out which network interface to send it on</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Layer 3 - Network Layer</h3>
+						<p>When receiving network layer</p>
+						<ul>
+							<li>will reassembling the packets into the segments</li>
+							<li>can tell the sender to slow down</li>
+						</ul>
+						<p>sdf</p>
 					</section>
 					<section>
 						<h3>Layer 2 - Data Link Layer</h3>
