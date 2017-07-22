@@ -188,25 +188,64 @@
 					<i>diagram of architecture of generic cloud computing</i>
 				</section>
 				<section>
-					<h2>WWW</h2>
-				</section>
-				<section>
 					<section>
-						<h3>HTTP</h3>
+						<h2>HTTP</h2>
 						<h4>the language of the Web</h4>
-						<p><a target="_blank" href="http://www.example.com">requests and responses</a></p>
+					</section>
+					<section>
+						<h3>HTTP specification</h3>
+						<p>HTTP functions as a request–response protocol in the client–server computing model.</p>
 						<aside class="notes">
-							The steps of an HTTP request/response lifecycle with Chrome
-							examples.
 							<ul>
-								<li>Resolve DNS</li>
-								<li>TCP/IP connection to a port: syn, syn-ack, ack</li>
-								<li>"keep-alive" vs. close</li>
-								<li>Going through a proxy</li>
-								<li>Getting to a load balancer</li>
-								<li>Server caching</li>
-								<li>Client caching</li>
+								<li>HTTP uses TCP/IP as a transport layer</li>
+								<li>The client submits an HTTP request message to a server</li>
+								<li>The server returns with a response message (html page, images, json, ...) to the client</li>
 							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>HTTP versions</h3>
+						<ul>
+							<li>HTTP V0.9 (1991)</li>
+							<li>HTTP/1.0 (1996) - connection for every request</li>
+							<li>HTTP/1.1 (1997) - connection reuse</li>
+							<li>HTTP/2 (2014)- server push</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>The dates are when the standards were released. Browser in the 1990 were more like the wild wild west</li>
+								<li>According to one source (W3Techs), as of May 2017, 13.7% of the top 10 million websites supported HTTP/2</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>HTTP Session</h3>
+						<p>HTTP is a stateless protocol.</p>
+						<aside class="notes">
+							<ul>
+								<li>client info hidden input or parameter or cookie</li>
+								<li>Show devtools and hit texastoc.com see cookie in request</li>
+								<li>show cookie in chrome settings </li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>HTTP Request</h3>
+						<ul>
+							<li>A request line (e.g., GET www.ibm.com HTTP/1.1)</li>
+							<li>Request header fields (e.g., Accept-Language: en)</li>
+							<li>An empty line</li>
+							<li>An optional message body</li>
+						</ul>
+						<br>
+						<br>
+						<a href="https://curl.haxx.se/">https://curl.haxx.se/</a>
+						<aside class="notes">
+							<ul>
+								<li>curl -v https://gturnquist-quoters.cfapps.io/api/random</li>
+								<li>curl https://gturnquist-quoters.cfapps.io/api/random | python -m json.tool</li>
+							</ul>
+						</ul>
 						</aside>
 					</section>
 					<section>
