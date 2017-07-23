@@ -244,13 +244,38 @@
 							<li>will reassembling the packets into the segments</li>
 							<li>can tell the sender to slow down</li>
 						</ul>
-						<p>sdf</p>
+					</section>
+					<section>
+						<h3>Layer 3 - Post office analogy</h3>
+						<p>The boxes come to Shelly in the Network Bay. She must determine how to send them to the next destination.</p>
+						<p class="fragment">If there is a single road between this post office and the final destination, then she will put the boxes on the loading dock for the truck bound for that final stop. However, if there's not a single road between them, she will figure out the best route and put the boxes on the loading dock for the truck heading to the first leg of the route. (i.e. which interface)</p>
 					</section>
 					<section>
 						<h3>Layer 2 - Data Link Layer</h3>
+						<ul>
+							<li>The Data Link Layer provides the node-to-node transfer (e.g. from/to MAC addresses)</li>
+							<li>Can break up the Network Layer packets into frames</li>
+							<li>Can make sure the frames have not been corrupted</li>
+							<li>Can drop duplicate frames</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Layer 2 - Post office analogy</h3>
+						<p>Rocky works for the Data Link union and he moves boxes on and off trucks.</p>
+						<p class="fragment">Sometimes Rock unpacks boxes and puts the contents into a number of smaller boxes with enough information that they can be reassembled into one box. (i.e. packets into frames)</p>
+					</section>
+					<section>
+						<h3>Layer 2 - Post office analogy continued</h3>
+						<p>Rocky lets his foreman know if any boxes are in bad shape. (i.e. checks for corruption)</p>
+						<p class="fragment">Rocky also participates in keeping a list of boxes that are unloaded in case a another one with the exact same label arrives. In this case the duplicate is thrown away. (i.e. drop duplicates)</p>
 					</section>
 					<section>
 						<h3>Layer 1 - Physical Layer</h3>
+						<p>Ethernet, 802.11, twisted pair, ...</p>
+					</section>
+					<section>
+						<h3>Layer 1 - Post office analogy</h3>
+						<p>The truck and the road</p>
 					</section>
 				</section>
 				<section>
