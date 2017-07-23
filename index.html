@@ -724,6 +724,66 @@
 						</aside>
 					</section>
 					<section>
+						<h3>Compression</h3>
+						<blockquote cite="https://en.wikipedia.org/wiki/HTTP_compression">
+							A 2009 article by Google engineers Arvind Jain and Jason Glasgow states that more than 99 person-years are wasted daily due to increase in page load time when users do not receive compressed content.
+						</blockquote>
+						<aside class="notes">
+							example.com in dev tools
+						</aside>
+					</section>
+					<section>
+						<h3>HTTP Authentication </h3>
+						<ul>
+							<li>Basic Auth</li>
+							<li>Token Based (e.g. OAuth2)</li>
+							<li>Custom</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Basic Auth</h3>
+						<p>Server challenges for username/password before showing web page.</p>
+						<p>There is no client/server session.</p>
+						<p><a href="https://auth-demo.aerobatic.io/">HTTP Basic Auth Demo</a></p>
+					</section>
+					<section>
+						<h3>Token based</h3>
+						<p><b>Authorization: Basic</b> <br>
+							<code>curl -v --user aerobatic:aerobatic https://auth-demo.aerobatic.io/protected-standard/</code></p>
+							<p><b>Authorization: Bearer</b> <br>
+								<code>curl -H "Authorization: Bearer QFMYBY4KGDFYNWRPDLRJ" https://www.eventbriteapi.com/v3/users/me/</code></p>
+						<aside class="notes">
+							<p>For basic curl auth header is a hash</p>
+							<p>Mention signing up on eventbrite to get the token - same as googgle tools</p>
+						</aside>
+					</section>
+					<section>
+						<h3>JSON Web Token (JWT)</h3>
+						<blockquote cite="https://jwt.io/introduction/">
+							JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA.
+						</blockquote>
+						<aside class="notes">
+							JWT is a big deal because it is more than a just a key to unlock the door. It also has a payload with information about the user.
+						</aside>
+					</section>
+					<section>
+						<h3>Caching</h3>
+						<p>Browsers cache html, javascript, css and more.</p>
+						<p class="fragment">Proxies can be configured to cache</p>
+						<p class="fragment">HTTP Web server (e.g. Apache/Nginx)</p>
+						<p class="fragment">Application Server (e.g. Ehcache in Spring)</p>
+						<p class="fragment">Databases</p>
+						<aside class="notes">
+							<ul>
+								<li>CDNs are good for browser caching</li>
+								<li>Stats for nike. Instead of ETL to denormalized DB made a lot of calls to DB but kept everything in memory cache</li>
+								<li>More info if needed<br>
+									<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP Caching</a>
+</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
 						<p>What happens when we type <code>http://www.example.com/</code> in a browser</p>
 					</section>
 					<section>
@@ -744,9 +804,16 @@
 								<i>steps to send an HTTP request</i>
 							</div>
 						</div>
-					</section>
-					<section>
-						<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP Caching</a>
+						<aside class="notes">
+							<ul>
+								<li>Browser checks it cache</li>
+								<li>DNS next section</li>
+								<li>Assemble request (browser)</li>
+								<li>TCP/IP already covered</li>
+								<li>SSL tomorrow</li>
+								<li>IP already covered</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<a href="http://royal.pingdom.com/2009/06/08/a-visual-explanation-of-how-dns-lookups-work/">DNS lookups</a>
@@ -769,11 +836,6 @@
 							</ul>
 						</aside>
 					</section>
-					<section>
-						assemble
-					</section>
-
-
 				</section>
 				<section>
 					<h2>Database</h2>
