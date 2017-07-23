@@ -226,7 +226,7 @@
 					<section>
 						<h3>Layer 4 - Post office analogy continued</h3>
 						<p>She takes all of that, makes a copy of each box, and sends them on to the next station. (i.e. in case of errors)</p>
-						<p class="fragment">Once she gets acknowledgement that all of the boxes arrived in good condition will he get rid of his copies.</p>
+						<p class="fragment">Once she gets acknowledgement that all of the boxes arrived in good condition she will get rid of the copies.</p>
 					</section>
 					<section>
 						<h3>Layer 3 - Network Layer</h3>
@@ -262,7 +262,7 @@
 					<section>
 						<h3>Layer 2 - Post office analogy</h3>
 						<p>Rocky works for the Data Link union and he moves boxes on and off trucks.</p>
-						<p class="fragment">Sometimes Rock unpacks boxes and puts the contents into a number of smaller boxes with enough information that they can be reassembled into one box. (i.e. packets into frames)</p>
+						<p class="fragment">Sometimes Rocky unpacks boxes and puts the contents into a number of smaller boxes with enough information that they can be reassembled into one box. (i.e. packets into frames)</p>
 					</section>
 					<section>
 						<h3>Layer 2 - Post office analogy continued</h3>
@@ -579,7 +579,148 @@
 								<li>curl -v https://gturnquist-quoters.cfapps.io/api/random</li>
 								<li>curl https://gturnquist-quoters.cfapps.io/api/random | python -m json.tool</li>
 							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>HTTP Request Methods</h3>
+						<p>HTTP/1.0 defined GET, POST and HEAD methods.</p>
+						<p class="fragment">HTTP/1.1 added: OPTIONS, PUT, DELETE, TRACE and CONNECT.</p>
+					</section>
+					<section>
+						<h3>HTTP Request Methods continued</h3>
+						<ul>
+							<li>GET - retrieve data</li>
+							<li>HEAD - identical to GET but no body</li>
+							<li>POST - submit data (e.g. login, add user, ...)</li>
+							<li>PUT - update data</li>
+							<li>DELETE - delete data</li>
+							<li>TRACE - loop back (i.e. echo)</li>
+							<li>OPTIONS - methods the server supports</li>
+							<li>CONNECT converts to a TCP/IP tunnel</li>
+							<li>PATCH - update a portion of data</li>
 						</ul>
+						<aside class="notes">
+							<ul>
+								<li>HEAD - This is useful for retrieving meta-information written in response headers</li>
+								<li>OPTIONS - CORS check (employed by Angular)</li>
+								<li>CONNECT - VPN instead</li>
+								<li>PATCH - never coded</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>REST (Representational state transfer)</h3>
+						<p>Is not a standard but a set of constraints, such as being stateless, having a client/server relationship, and a uniform interface.</p>
+					</section>
+					<section>
+						<h3>REST</h3>
+						<p>Normally done using using HTTP.</p>
+						<p class="fragment">Employs a verb/noun dialect (e.g. GET /users, GET /users/44, ...).</p>
+						<p class="fragment">JSON data to represent data objects and attributes.</p>
+						<p class="fragment">Stateless interactions store no client context on the server between requests.</p>
+						<p class="fragment"><a href="https://www.eventbrite.com/developer/v3/">Eventbrite APIs</a></p>
+						<aside class="notes">
+							<ul>
+								<li>The noun/verb dialet goes a long way for self documenting APIs</li>
+								<li>JSON is becoming the defactor representation for data. It is much smaller than XML. Smaller is better. Is used natively if a node.js server. Java marshalls and unmarshalls JSON to Java objects.</li>
+								<li>Stateless - server does not have a session for the client. There are other ways to keep session data (see next section)</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>REST</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>PROS</th>
+									<th>CONS</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Finally can decouple the server from the client</td>
+									<td>Must have enough state on client or server (e.g. a wizard)</td>
+								</tr>
+								<tr>
+									<td>One API for multiple clients (web, iOS, Android, ...)</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Atomic call</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<aside class="notes">
+							Session state can be kept on client if not web. For web session state must be kept in a cookie or on server or ... .
+						</aside>
+					</section>
+					<section>
+						<h3>Request Headers</h3>
+						<p>
+							<a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields">List of HTTP header fields</a>
+						</p>
+						<p>
+							<a href="http://www.example.com">example.com</a>
+						</p>
+						<aside class="notes">
+							<ul>
+								<li>Accept (mime type)</li>
+								<li>Accept-Encoding	(zip)</li>
+								<li>Authorization (will show this later)</li>
+								<li>Cache-Control (no-cache means get it from the server, no-store means do not store the response)</li>
+								<li>Connection (request the connection stay open)</li>
+								<li>Cookie (will show this later)</li>
+								<li>Content-Type (post and put - e.g. multipart/form-data)</li>
+								<li>Host</li>
+								<li>Origin</li>
+								<li>Referer (funny that is was misspelled)</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>HTTP Response</h3>
+							<ul>
+								<li>A status line with the status code and reason message (e.g., HTTP/1.1 200 OK)</li>
+								<li>Response header fields (e.g., Content-Type: text/html)</li>
+								<li>An empty line</li>
+								<li>An optional message body</li>
+							</ul>
+							<p>
+								<a href="http://www.example.com">example.com</a>
+							</p>
+							<aside class="notes">
+								Look closer at the response in dev tools
+							</aside>
+					</section>
+					<section>
+						<h3>HTTP Response Status Codes</h3>
+						<a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>
+						<aside class="notes">
+							<p>
+								404 <br>
+								<code>
+									curl -v http://texastoc.com/sdfsdf
+								</code>
+							</p>
+							<p>
+								401 <br>
+								<code>
+									curl -v https://www.eventbriteapi.com/v3/users/me/?token=bogus
+								</code>
+							</p>
+						</aside>
+					</section>
+					<section>
+						<h3>HTTP Response Headers</h3>
+						<a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields">List of HTTP header fields</a>
+						<aside class="notes">
+							<ul>
+								<li>Access-Control-Allow-Origin (which sites allowed)</li>
+								<li>Connection (if closed means that the web server will close the TCP connection immediately after the transfer of this response)</li>
+								<li>Content-Encoding (gzip)</li>
+								<li>Set-Cookie (sets the cookie)</li>
+							</ul>
 						</aside>
 					</section>
 					<section>
