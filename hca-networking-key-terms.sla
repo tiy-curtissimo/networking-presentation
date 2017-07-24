@@ -21,12 +21,12 @@
         <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
         <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
         <HYPHEN/>
-        <STYLE NAME="Default Paragraph Style" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0" FONT="Tisa Pro Regular"/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0" FONT="Tisa Pro Regular"/>
         <STYLE NAME="Title" PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style" FONT="Tisa Sans Pro Regular" FONTSIZE="36"/>
         <STYLE NAME="Section Header" PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Section Header"/>
         <STYLE NAME="Term" PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Term"/>
         <STYLE NAME="Subterm" PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Subterm"/>
-        <CHARSTYLE CNAME="Default Character Style" FONT="Tisa Pro Regular" FONTSIZE="10" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Tisa Pro Regular" FONTSIZE="10" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <CHARSTYLE CNAME="Section Header" CPARENT="Default Character Style" FONT="Tisa Sans Pro Regular" FONTSIZE="20"/>
         <CHARSTYLE CNAME="Term" CPARENT="Section Header" FONTSIZE="15" FCOLOR="Black"/>
         <CHARSTYLE CNAME="Subterm" CPARENT="Term" FONT="Tisa Sans Pro Medium" FONTSIZE="10"/>
@@ -152,26 +152,32 @@
             <trail ALIGN="2"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="140" YPOS="160.333333333333" WIDTH="255" HEIGHT="380" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 380 255 380 255 380 255 380 0 380 0 380 0 380 0 380 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 380 255 380 255 380 255 380 0 380 0 380 0 380 0 380 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="19" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="140" YPOS="160.333333333333" WIDTH="255" HEIGHT="397.166666666667" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 397.167 255 397.167 255 397.167 255 397.167 0 397.167 0 397.167 0 397.167 0 397.167 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 397.167 255 397.167 255 397.167 255 397.167 0 397.167 0 397.167 0 397.167 0 397.167 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="19" BACKITEM="-1">
             <ITEXT CH="Authentication Concepts"/>
             <para PARENT="Section Header"/>
-            <ITEXT CH="Active Directory (AD)"/>
+            <ITEXT CH="AD"/>
+            <para PARENT="Term"/>
+            <ITEXT CH="Active Directory"/>
             <para PARENT="Term"/>
             <ITEXT CH="Active Directory is a product from Microsoft which maintains a list of all devices and resources of those devices. This list includes people, computers, printers, network drives, routers, switches, telephones (in the case of VOIP), and more."/>
             <para/>
-            <ITEXT CH="Active Directory Group (AD Group)"/>
+            <ITEXT CH="AD Group"/>
+            <para PARENT="Term"/>
+            <ITEXT CH="Active Directory Group"/>
             <para PARENT="Term"/>
             <ITEXT CH="An Active Directory Group is a subset of the entries in Active Directory to which privileges to other resources on the network can be applied uniformly."/>
             <para/>
-            <ITEXT CH="Integrated Windows Authentication (IWA)"/>
+            <ITEXT CH="Integrated Windows Authentication"/>
             <para PARENT="Term"/>
             <ITEXT CH="Software applications running on Windows can take advantage of Integrated Windows Authentication (IWA) with remote services that accept IWA as a way to authenticate the person using the software application. Companies primarily use this to allow employees to access internal Web applications without the need of logging in."/>
             <para/>
             <ITEXT CH="Kerberos"/>
             <para PARENT="Term"/>
-            <ITEXT CH="An authentication and authorization provider, Kerberos relies on the idea of a software application running on a person's computer can get a ticket granting access to a service on a remote computer (like a Web site)."/>
+            <ITEXT CH="An authentication and authorization provider, Kerberos relies on the idea that a software application running on a person's computer can get a ticket granting access to a service on a remote computer (like a Web site)."/>
             <para/>
-            <ITEXT CH="NT LAN Manager (NTLM)"/>
+            <ITEXT CH="NTLM"/>
+            <para PARENT="Term"/>
+            <ITEXT CH="NT LAN Manager"/>
             <para PARENT="Term"/>
             <ITEXT CH="The NT LAN Manager is a suite of security protocols that Microsoft originated to authenticate users and provide integrity and encryption over internal-network-connected resources."/>
             <para/>
@@ -179,10 +185,11 @@
             <para PARENT="Term"/>
             <ITEXT CH="The PingFederate® product from Ping Identity provides a solution to enable single sign-on (SSO) into Web applications and data-driven APIs."/>
             <para/>
-            <ITEXT CH="Security Assertion Markup Language (SAML)"/>
+            <ITEXT CH="SAML"/>
             <para PARENT="Term"/>
-            <ITEXT CH="The Security Assertion Markup Language is a open standard for exchanging authentication and authorization data between two separate parties. For example, if you want to log into HBO to watch Silicon Valley, HBO redirects you to your cable provider. You log in, there, and the cable provider sends back a SAML packet to HBO saying that you have the identity and authority to watch the TV show."/>
-            <para/>
+            <ITEXT CH="Security Assertion Markup Language"/>
+            <para PARENT="Term"/>
+            <ITEXT CH="The Security Assertion Markup Language is an open standard for exchanging authentication and authorization data between two separate parties. For example, if you want to log into HBO to watch Silicon Valley, HBO redirects you to your cable provider. You log in, there, and the cable provider sends back a SAML packet to HBO saying that you have the identity and authority to watch the TV show."/>
             <para/>
             <ITEXT CH="Networking Concepts"/>
             <para PARENT="Section Header"/>
@@ -201,7 +208,6 @@
             <ITEXT CH="Intermediate Certificate Authority"/>
             <para PARENT="Subterm"/>
             <ITEXT CH="An Intermediate Certificate Authority is a certifiacate authority that relies on another certificate authority."/>
-            <para/>
             <para/>
             <ITEXT CH="Digital Certificates (continued)"/>
             <para PARENT="Term"/>
@@ -245,13 +251,13 @@
             <para/>
             <ITEXT CH="Encapsulation"/>
             <para PARENT="Term"/>
-            <ITEXT CH="A principle in network protocol design which sepeartes responsibilities into discrete modules that hide the implmentation and behavior of dependant modules."/>
+            <ITEXT CH="A principle in network protocol design which separates responsibilities into discrete modules that hide the implementation and behavior of dependent modules."/>
             <para/>
             <ITEXT CH="Firewall"/>
             <para PARENT="Term"/>
             <ITEXT CH="A device (hardware or software) that prevents network traffic from entering or leaving the device based on configuration."/>
             <para/>
-            <ITEXT CH="Internet Protocol Suite (IPS)"/>
+            <ITEXT CH="Internet Protocol Suite"/>
             <para PARENT="Term"/>
             <ITEXT CH="The Internet Protocol Suite (of which TCP/IP are members), describes a real-world implementation of a four-layer network abstraction that actually powers the Internet. Some of the layers have the same names as the OSI Model layers; don't let that confuse you. "/>
             <para/>
@@ -295,7 +301,7 @@
             <para PARENT="Term"/>
             <ITEXT CH="Network Address Translation"/>
             <para PARENT="Term"/>
-            <ITEXT CH="A method by which the header information in IP datagram headers is modified from one IP address to another to interconnect two IP networks that incompatible addressing."/>
+            <ITEXT CH="A method by which the header information in IP datagram headers is modified from one IP address to another to interconnect two IP networks that have incompatible addressing."/>
             <para/>
             <ITEXT CH="OSI Theoretical Network Model"/>
             <para PARENT="Term"/>
@@ -351,7 +357,7 @@
             <para/>
             <ITEXT CH="Subnet"/>
             <para PARENT="Term"/>
-            <ITEXT CH="The logical grouping of directly-connected computers by IP address from the most signigicant portion to the least significant portion, for example, 192.168.0.0/16 is the subnet of all connected computers whose IP address begins with &quot;192.168.&quot;."/>
+            <ITEXT CH="The logical grouping of directly-connected computers by IP address from the most significant portion to the least significant portion, for example, 192.168.0.0/16 is the subnet of all connected computers whose IP address begins with &quot;192.168.&quot;."/>
             <para/>
             <ITEXT CH="SYN"/>
             <para PARENT="Term"/>
@@ -365,7 +371,7 @@
             <para PARENT="Term"/>
             <ITEXT CH="Time to Live"/>
             <para PARENT="Term"/>
-            <ITEXT CH="Also called the &quot;hop limit&quot;, an originating device will specify the number of devices that its network data should travel through before being discarded."/>
+            <ITEXT CH="Also called the &quot;hop limit&quot;, this number specifies the number of devices through which a network packet should travel through before being discarded."/>
             <para/>
             <ITEXT CH="Tunnel"/>
             <para PARENT="Term"/>
@@ -375,7 +381,7 @@
             <para PARENT="Term"/>
             <ITEXT CH="Virtual LAN"/>
             <para PARENT="Term"/>
-            <ITEXT CH="The result of partioning devices on a LAN into logical groups that act as if they exist on separate networks."/>
+            <ITEXT CH="The result of partitioning devices on a LAN into logical groups that act as if they exist on separate networks."/>
             <para/>
             <ITEXT CH="VPN"/>
             <para PARENT="Term"/>
@@ -392,7 +398,6 @@
             <ITEXT CH="WiFi"/>
             <para PARENT="Term"/>
             <ITEXT CH="A wireless technology that can create a wireless LAN."/>
-            <para/>
             <para/>
             <ITEXT CH="HCA Data Centers"/>
             <para PARENT="Section Header"/>
@@ -419,7 +424,6 @@
             <ITEXT FONT="Tisa Pro Bold" CH="AKDC"/>
             <ITEXT CH=": HCA Anchorage, Alaska Regional Datacenter"/>
             <para/>
-            <para/>
             <ITEXT CH="Web Concepts"/>
             <para PARENT="Section Header"/>
             <ITEXT CH="Client caching"/>
@@ -428,7 +432,7 @@
             <para/>
             <ITEXT CH="Cookies"/>
             <para PARENT="Term"/>
-            <ITEXT CH="Information set by a server (like a Web server) on a client (like your browser) to provide information between each distinct request."/>
+            <ITEXT CH="Information set by a server (like a Web server) on a client (like your browser) that the client will send with every interaction."/>
             <para/>
             <ITEXT CH="DHCP"/>
             <para PARENT="Term"/>
@@ -488,7 +492,7 @@
             <para/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="417" YPOS="160.3333333" WIDTH="255" HEIGHT="380" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 380 255 380 255 380 255 380 0 380 0 380 0 380 0 380 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 380 255 380 255 380 255 380 0 380 0 380 0 380 0 380 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="60" BACKITEM="18">
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="417" YPOS="160.3333333" WIDTH="255" HEIGHT="379.6666667" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 379.667 255 379.667 255 379.667 255 379.667 0 379.667 0 379.667 0 379.667 0 379.667 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 379.667 255 379.667 255 379.667 255 379.667 0 379.667 0 379.667 0 379.667 0 379.667 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="60" BACKITEM="18">
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="579.6101159" YPOS="898.16651026" WIDTH="92.81333948" HEIGHT="78.73992391" RADRECT="0" FRTYPE="3" CLIPEDIT="1" PWIDTH="0.01" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="Copy of Group1" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="1" groupsLastItem="15" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 0 78.7399 0 78.7399 0 78.7399 0 78.7399 92.8133 78.7399 92.8133 78.7399 92.8133 78.7399 92.8133 78.7399 92.8133 0 92.8133 0 92.8133 0 92.8133 0 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 5.44606 0 5.44606 0 5.44606 0 5.44606 0 5.44606 5.39577 5.44606 5.39577 5.44606 5.39577 5.44606 5.39577 0 5.39577 0 5.39577 0 5.39577 0 5.39577 0 0 0 0 " NUMGROUP="1" GROUPS="2 " startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
@@ -661,10 +665,10 @@
             <trail ALIGN="0"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="140" YPOS="559.333333333333" WIDTH="255" HEIGHT="206.666666666667" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 206.667 255 206.667 255 206.667 255 206.667 0 206.667 0 206.667 0 206.667 0 206.667 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 206.667 255 206.667 255 206.667 255 206.667 0 206.667 0 206.667 0 206.667 0 206.667 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="61" BACKITEM="19">
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="140" YPOS="568.333333333333" WIDTH="255" HEIGHT="203.333333333333" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 203.333 255 203.333 255 203.333 255 203.333 0 203.333 0 203.333 0 203.333 0 203.333 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 203.333 255 203.333 255 203.333 255 203.333 0 203.333 0 203.333 0 203.333 0 203.333 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="61" BACKITEM="19">
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="417" YPOS="580.666666666667" WIDTH="255" HEIGHT="185.333333333333" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 185.333 255 185.333 255 185.333 255 185.333 0 185.333 0 185.333 0 185.333 0 185.333 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 185.333 255 185.333 255 185.333 255 185.333 0 185.333 0 185.333 0 185.333 0 185.333 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="62" BACKITEM="60">
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="417" YPOS="592.5" WIDTH="255" HEIGHT="173.5" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 173.5 255 173.5 255 173.5 255 173.5 0 173.5 0 173.5 0 173.5 0 173.5 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 173.5 255 173.5 255 173.5 255 173.5 0 173.5 0 173.5 0 173.5 0 173.5 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="62" BACKITEM="60">
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="140" YPOS="998.666666666667" WIDTH="255" HEIGHT="577.696969696969" RADRECT="0" FRTYPE="0" CLIPEDIT="1" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 577.697 255 577.697 255 577.697 255 577.697 0 577.697 0 577.697 0 577.697 0 577.697 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255 0 255 0 255 0 255 0 255 577.697 255 577.697 255 577.697 255 577.697 0 577.697 0 577.697 0 577.697 0 577.697 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="532" gHeight="599.333333333333" LAYER="0" BOOKMARK="0" NEXTITEM="37" BACKITEM="61">
