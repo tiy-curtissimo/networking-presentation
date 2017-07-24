@@ -131,10 +131,14 @@
 				</section>
 				<section>
 					<h2>Inside the Network</h2>
+					<aside class="notes">
+						<p>Beginning more conceptual more word - later less words more details</p>
+					</aside>
 				</section>
 				<section>
 					<section>
-						<h2>OSI Model Presentation</h2>
+						<h2>OSI Model</h2>
+						<p>Open Systems Interconnection</p>
 					</section>
 					<section>
 						<h3>Overview</h3>
@@ -164,7 +168,7 @@
 					<section>
 						<h3>Layer 7 - Post office analogy</h3>
 						<p>The movie that you've encoded has been printed out into 29,923,182 still images by the local print shop. </p>
-						<p>You've dumped them at the Application Counter at Post Office with where you want it to go, threw some cash on the counter, and walked out.</p>
+						<p>You've dumped them at the Application Counter at post office with where you want it to go, threw some cash on the counter, and walked out.</p>
 					</section>
 					<section>
 						<h3>Layer 6 - Presentation Layer</h3>
@@ -181,12 +185,12 @@
 					<section>
 						<h3>Layer 6 - Post office analogy</h3>
 						<p>A worker at the Application Counter hands the sheets to Sid, the worker at the Presentation Station.</p>
-						<p class="fragment">Sid takes a look at all these sheets of letter-sized paper. This particular Post Office really likes using A4, so the person changes the size of all the sheets of paper. (i.e., data transformation)</p>
+						<p class="fragment">Sid takes a look at all these sheets of letter-sized paper. This particular post office really likes using A4, so the person changes the size of all the sheets of paper. (i.e., data transformation)</p>
 					</section>
 					<section>
 						<h3>Layer 6 - Post office analogy continued</h3>
 						<p>Sid then realizes that there are images that are identical because nothing changed between the movie frames. He discards the extra ones and writes a little note about the duplicates. (i.e. compression)</p>
-						<p class="fragment">Sid then decide to fold all of the pieces in thirds because that's the standard way to fold a piece of paper for the Post Office. (i.e. encryption)</p>
+						<p class="fragment">Sid then decide to fold all of the pieces in thirds because that's the standard way to fold a piece of paper for the post office. (i.e. encryption)</p>
 					</section>
 					<section>
 						<h3>Layer 5 - Session Layer</h3>
@@ -203,13 +207,16 @@
 						<p>It determines how to split up the data into smaller units (fragment), and apply headers to it for tracking, order, and addressing. When receiving reassembles back into data.</p>
 						<p class="fragment">Takes on the responsibility of ensuring reliable transmission.</p>
 						<aside class="notes">
-							Regarding reliable transmision
+							<p>after showing slide</p>
+							<p>
+								Responsibilities include:
+							</p>
 							<ul>
-								<li>controlling the amount of traffic</li>
-								<li>acknowledging the receipt of messages</li>
-								<li>which application sent data (or which is to receive data)</li>
+								<li>controlls the amount of traffic</li>
+								<li>acknowledges the receipt of messages</li>
+								<li>tracks which application sent data (or which is to receive data)</li>
 								<li>deals with error in messages and missing messages</li>
-								<li>connection handling (reinitiate, retransmit)</li>
+								<li>handles connections (reinitiate, retransmit)</li>
 							</ul>
 						</aside>
 					</section>
@@ -281,6 +288,7 @@
 				<section>
 					<section>
 						<h2>IPS Model Presentation</h2>
+						<p>Internet protocol suite</p>
 					</section>
 					<section>
 						<h3>Different than OSI</h3>
@@ -335,6 +343,10 @@
 
 						<blockquote cite="https://en.wikipedia.org/wiki/Jon_Postel#Postel.27s_law">[build application protocols with] a general principle of robustness: be conservative in what you do, be liberal in what you accept from others.</blockquote>
 
+						<aside class="notes">
+							<p>Jon Postel an American computer scientist who made many significant contributions to the development of the Internet, particularly with respect to standards.</p>
+							<p>Request for Comment (RFC)</p>
+						</aside>
 					</section>
 					<section>
 						<p>Basically, any protocol that uses TCP or UDP lives in the Application Layer.</p>
@@ -388,7 +400,7 @@
 						<h4>Internet Layer</h4>
 						<p>This is IP. It does two things: addressing (IP addresses) and routing. That's it. Figure out where a packet needs to go.</p>
 						<aside class="notes">
-							<p>Sometimes that's from the actual client to a server. Or from router to router to router ...</p>
+							<p>Sometimes that's one hop from the one system on the LAN to another. Or from router to router to router ...</p>
 						</aside>
 					</section>
 					<section>
@@ -432,7 +444,8 @@
 						<h3>WAN</h3>
 						<img src="images/wan.svg">
 						<aside class="notes">
-							Think of the routers as an ISP
+							<p>Think of the routers as an ISP</p>
+							<p>This is a very simplistic view. B.T. will show detailed diagrams</p>
 						</aside>
 					</section>
 				</section>
@@ -797,6 +810,10 @@
 						</aside>
 					</section>
 					<section>
+						<h3>Custom Auth</h3>
+						<p>We been doing this for decades. Log in and check the credentials against your applications database.</p>
+					</section>
+					<section>
 						<h3>Caching</h3>
 						<p>Browsers cache html, javascript, css and more.</p>
 						<p class="fragment">Proxies can be configured to cache</p>
@@ -876,7 +893,7 @@
 					</section>
 					<section>
 						<h4>Performance</h4>
-						<p>Generally speaking most server APIs should return in sub-second time. Many server/database performance problem issues are not network issues but instead programming issues.</p>
+						<p>Generally speaking most server APIs should return in sub-second time. Many server/database performance problem issues are not network issues but instead programming issues or configuring database connection pools.</p>
 					</section>
 					<section>
 						<h4>Performance Problems Causes</h4>
@@ -888,7 +905,7 @@
 					<section>
 						<h4>Performance Mitigation</h4>
 						<p>Need an expert (or someone close to it) to configure pooling</p>
-						<p class="fragment">Web application normally page list results</p>
+						<p class="fragment">Web applications normally page list results</p>
 						<p class="fragment">Stored procedures to avoid multiple trips</p>
 						<p class="fragment">Query a denormalize schema</p>
 						<aside class="notes">
