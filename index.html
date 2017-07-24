@@ -1000,22 +1000,37 @@
 					<section>
 						<h2>Establishing the Secure Connection</h2>
 						<img src="images/https-1.svg">
+						<aside class="notes">
+							Browser connects to a web server secured with SSL. Browser requests that the server identify itself.
+						</aside>
 					</section>
 					<section>
 						<h2>Establishing the Secure Connection</h2>
 						<img src="images/https-2.svg">
+						<aside class="notes">
+							Server sends a copy of its SSL Certificate, including the server’s public key.
+						</aside>
 					</section>
 					<section>
 						<h2>Establishing the Secure Connection</h2>
 						<img src="images/https-3.svg">
+						<aside class="notes">
+							Browser checks the certificate root against a list of trusted CAs and that the certificate is unexpired, unrevoked, and that its common name is valid for the website that it is connecting to. If the browser trusts the certificate, it creates, encrypts, and sends back a symmetric session key using the server’s public key.
+						</aside>
 					</section>
 					<section>
 						<h2>Establishing the Secure Connection</h2>
 						<img src="images/https-4.svg">
+						<aside class="notes">
+							Server decrypts the symmetric session key using its private key and sends back an acknowledgement encrypted with the session key to start the encrypted session.
+						</aside>
 					</section>
 					<section>
 						<h2>Establishing the Secure Connection</h2>
 						<img src="images/https-5.svg">
+						<aside class="notes">
+							Server and Browser now encrypt all transmitted data with the session key.
+						</aside>
 					</section>
 					<section>
 						<h2>Establishing the Secure Connection</h2>
@@ -1133,6 +1148,14 @@ google.com  text = "v=spf1 include:_spf.google.com ~all"  // meta info
 							<p><code>nmap -A -T4 scanme.nmap.org</code></p>
 							<p>Then, let's do The Iron Yard!</p>
 							<p><code>nmap -A -T4 www.theironyard.com</code></p>
+						</aside>
+					</section>
+					<section>
+						<h2><code class="cli">telnet</code></h2>
+						<p>Has been replaced by <code>ssh</code>.</p>
+						<p>Your client becomes a virtual terminal on the remote system.</p>
+						<aside class="notes">
+							<code>telnet towel.blinkenlights.nl</code>
 						</aside>
 					</section>
 				</section>
