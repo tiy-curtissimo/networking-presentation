@@ -487,12 +487,24 @@
 						<blockquote cite="https://en.wikipedia.org/wiki/Cloud_computing">
 							"Cloud computing is a form of Internet-based computing that provides shared computer processing resources and data to computers and other devices on demand."
 						</blockquote>
+						<aside class="notes">
+							<p>Good if need more computing on demand</p>
+							<p>Good for small companies that don't have too many IT people</p>
+							<p>Person - moved 10 servers times dev, test, and production out of datacenter to Amazon's cloud. </p>
+							<p>Nike. Cloud server for outside access for a few months. Would have waited too long for Nike IT.</p>
+						</aside>
 					</section>
 					<section>
 						<h3>AWS Elastic Beanstalk</h3>
 						<blockquote cite="https://aws.amazon.com/elasticbeanstalk/">
 							"You can simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring."
 						</blockquote>
+						<aside class="notes">
+							<p>
+								AWS Elastic Beanstalk claims...
+							</p>
+							<p>Their tag line - you write the code and we take care of the infrasture</p>
+						</aside>
 					</section>
 					<section>
 						<h3>Cloud Security</h3>
@@ -557,7 +569,8 @@
 						<p>HTTP is a stateless protocol.</p>
 						<aside class="notes">
 							<ul>
-								<li>client info hidden input or parameter or cookie</li>
+								<li>client info hidden input or parameter</li>
+								<li>server info cookies</li>
 								<li>Show devtools and hit texastoc.com see cookie in request</li>
 								<li>show cookie in chrome settings </li>
 							</ul>
@@ -575,8 +588,12 @@
 						<br>
 						<a href="https://curl.haxx.se/">https://curl.haxx.se/</a>
 						<aside class="notes">
+							<p>Show request/host/verb in curl</p>
 							<ul>
 								<li>curl -v https://gturnquist-quoters.cfapps.io/api/random</li>
+							</ul>
+							<p>Show response</p>
+							<ul>
 								<li>curl https://gturnquist-quoters.cfapps.io/api/random | python -m json.tool</li>
 							</ul>
 						</aside>
@@ -602,7 +619,7 @@
 						<aside class="notes">
 							<ul>
 								<li>HEAD - This is useful for retrieving meta-information written in response headers</li>
-								<li>OPTIONS - CORS check (employed by Angular)</li>
+								<li>OPTIONS - CORS check (explaned later)</li>
 								<li>CONNECT - VPN instead</li>
 								<li>PATCH - never coded</li>
 							</ul>
@@ -622,7 +639,7 @@
 						<aside class="notes">
 							<ul>
 								<li>The noun/verb dialet goes a long way for self documenting APIs</li>
-								<li>JSON is becoming the defactor representation for data. It is much smaller than XML. Smaller is better. Is used natively if a node.js server. Java marshalls and unmarshalls JSON to Java objects.</li>
+								<li>JSON is becoming the defactor representation for data. It is much smaller than XML. Smaller is better. Is used natively if a node.js server. Java marshalls/unmarshalls JSON to/from Java objects.</li>
 								<li>Stateless - server does not have a session for the client. There are other ways to keep session data (see next section)</li>
 							</ul>
 						</aside>
@@ -684,6 +701,7 @@
 								<li>Origin</li>
 								<li>Referer (funny that is was misspelled)</li>
 							</ul>
+							<p>Look at the request headers in chrome dev tools for example.com</p>
 						</aside>
 					</section>
 					<section>
@@ -694,12 +712,6 @@
 								<li>An empty line</li>
 								<li>An optional message body</li>
 							</ul>
-							<p>
-								<a href="http://www.example.com">example.com</a>
-							</p>
-							<aside class="notes">
-								Look closer at the response in dev tools
-							</aside>
 					</section>
 					<section>
 						<h3>HTTP Response Status Codes</h3>
@@ -722,6 +734,9 @@
 					<section>
 						<h3>HTTP Response Headers</h3>
 						<a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields">List of HTTP header fields</a>
+						<p>
+							<a href="http://www.example.com">example.com</a>
+						</p>
 						<aside class="notes">
 							<ul>
 								<li>Access-Control-Allow-Origin (which sites allowed)</li>
@@ -729,6 +744,7 @@
 								<li>Content-Encoding (gzip)</li>
 								<li>Set-Cookie (sets the cookie)</li>
 							</ul>
+							<p>Look closer at the response in dev tools</p>
 						</aside>
 					</section>
 					<section>
@@ -753,6 +769,9 @@
 						<p>Server challenges for username/password before showing web page.</p>
 						<p>There is no client/server session.</p>
 						<p><a href="https://auth-demo.aerobatic.io/">HTTP Basic Auth Demo</a></p>
+						<aside class="notes">
+							Show bad login before good login
+						</aside>
 					</section>
 					<section>
 						<h3>Token based</h3>
@@ -771,7 +790,10 @@
 							JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA.
 						</blockquote>
 						<aside class="notes">
-							JWT is a big deal because it is more than a just a key to unlock the door. It also has a payload with information about the user.
+							<p>
+							JWT is a big deal because it is more than a just a key to unlock the door (which is what the bearer token is). It also has a payload with information about the user.
+							</p>
+							<p>JWT is small (not XML)</p>
 						</aside>
 					</section>
 					<section>
@@ -802,7 +824,7 @@
 										<div class="layer fragment highlight-current-green">Check browser cache</div>
 										<div class="layer fragment highlight-current-green">Resolve DNS</div>
 										<div class="layer fragment highlight-current-green">Assemble HTTP request</div>
-										<div class="layer fragment highlight-current-green">TCP/IP connection</div>
+										<div class="layer fragment highlight-current-green">TCP connection</div>
 										<div class="layer fragment highlight-current-green">SSL encryption</div>
 										<div class="layer fragment highlight-current-green">IP packets</div>
 									</div>
@@ -832,7 +854,7 @@
 							</ul>
 							<ul>
 								<li>Query the recursive name server (provided by ISP or wireless provider). The name server will check its cache for the entry and check its TTL. If it doesn't have it or it is expired then...</li>
-								<li>Query the Internet root servers to get the address of th name servers for the .com top level domain (TLD)</li>
+								<li>Query the Internet root servers to get the address of the name servers for the .com top level domain (TLD)</li>
 								<li>Query the .com TLD name servers to get the address of the authoritative name servers for abc.com</li>
 								<li>Query the authoritative name servers for abc.com to finally get the IP address</li>
 							</ul>
@@ -846,7 +868,43 @@
 					</section>
 				</section>
 				<section>
-					<h2>Database</h2>
+					<section>
+						<h2>Database</h2>
+					</section>
+					<section>
+						<img src="images/dmz.svg">
+					</section>
+					<section>
+						<h4>Performance</h4>
+						<p>Generally speaking most server APIs should return in sub-second time. Many server/database performance problem issues are not network issues but instead programming issues.</p>
+					</section>
+					<section>
+						<h4>Performance Problems Causes</h4>
+						<p>Poorly configured database connection pooling</p>
+						<p class="fragment">Too big a result set</p>
+						<p class="fragment">Multiple trips to the database in a single server API</p>
+						<p class="fragment">Complicated queries (e.g. subqueries along with multiple outer joins)</p>
+					</section>
+					<section>
+						<h4>Performance Mitigation</h4>
+						<p>Need an expert (or someone close to it) to configure pooling</p>
+						<p class="fragment">Web application normally page list results</p>
+						<p class="fragment">Stored procedures to avoid multiple trips</p>
+						<p class="fragment">Query a denormalize schema</p>
+						<aside class="notes">
+							<ul>
+								<li>pooling</li>
+								<li>big result set</li>
+								<li>multiple trips</li>
+								<li>complicated query</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h4>Proprietary</h4>
+						<p>Besides SQL everything else about a database is proprietary (e.g. configuring caching, master/slave or clustering for reliability, background jobs, ...)</p>
+						<p>Get yourself a good database administrator</p>
+					</section>
 				</section>
 				<section>
 					<h2>Review</h2>
